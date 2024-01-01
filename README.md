@@ -1,1 +1,0 @@
-# heshdotcc.github.io
