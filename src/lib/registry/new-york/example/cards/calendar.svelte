@@ -1,0 +1,18 @@
+<script lang="ts">
+	import * as Card from "$/lib/new-york/ui/card";
+	import { RangeCalendar } from "$/lib/new-york/ui/range-calendar";
+	import { today, getLocalTimeZone } from "@internationalized/date";
+	const start = today(getLocalTimeZone());
+	const end = start.add({ days: 8 });
+
+	let value = {
+		start,
+		end
+	};
+</script>
+
+<Card.Root class="max-w-[260px]">
+	<Card.Content class="p-1">
+		<RangeCalendar bind:value />
+	</Card.Content>
+</Card.Root>
